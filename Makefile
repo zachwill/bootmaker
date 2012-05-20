@@ -41,9 +41,9 @@ clean:
 #  Compile CSS
 # ----------------------
 css:
-	@cat css/bootstrap.min.css > css/production.css
-	@cat css/bootstrap-responsive.min.css >> css/production.css
-	@recess --compress css/dev.less >> css/production.css
+	@cd css; cat bootstrap.min.css > production.css
+	@cd css; cat bootstrap-responsive.min.css >> production.css
+	@cd css; recess --compress dev.less >> production.css
 	@echo "\n⚡  ${BOLD}Don't forget to update index.html${NORM}  ⚡\n"
 
 
