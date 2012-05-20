@@ -17,6 +17,7 @@ build:
 	@rm -rf bootstrap
 	@make index
 	@make js
+	@echo "\n⚡  ${BOLD}Good luck building your site${NORM}  ⚡\n"
 
 
 # ----------------------
