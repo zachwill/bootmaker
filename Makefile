@@ -67,4 +67,12 @@ js:
 	@echo "\n${BOLD}Grab latest LESS.js...  ${NORM}${CHECK}\n"
 
 
+# ----------------------
+#  Compile Less files on save
+# ----------------------
+watch:
+	@echo "\n${BOLD}Watching dev.less...  ${NORM}\n"
+	watchr -e "watch('css/.*\.less') { system 'make css' }"
+
+
 .PHONY: css js
