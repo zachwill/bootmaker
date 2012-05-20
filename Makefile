@@ -13,7 +13,7 @@ build:
 	@echo "\n⚡  ${BOLD}This might take a minute${NORM}  ⚡\n"
 	@make boot
 	@cd bootstrap; mv bootstrap/* ../
-	@echo "\n${BOLD}Moved files...  ${NORM}${CHECK}\n"
+	@echo "\n${BOLD}Move files...  ${NORM}${CHECK}\n"
 	@rm -rf bootstrap
 	@make index
 	@make js
