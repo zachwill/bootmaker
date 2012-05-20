@@ -72,7 +72,8 @@ js:
 # ----------------------
 watch:
 	@echo "\n${BOLD}Watching dev.less...  ${NORM}\n"
-	@watchr -e "watch('css/dev.less') { system 'make css' }"
+	@echo "watch('css/.*\.less') { system 'make css' }" > /tmp/bootstrap.watchr
+	@watchr /tmp/bootstrap.watchr
 
 
 .PHONY: css js
