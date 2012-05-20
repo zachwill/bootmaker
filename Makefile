@@ -53,7 +53,7 @@ index:
 	@curl -L http://git.io/index > index.html
 	@echo "\n${BOLD}Create index.html...  ${NORM}${CHECK}\n"
 	@touch css/dev.less
-	@echo "\n${BOLD}Create blank dev.less file...  ${NORM}${CHECK}\n"
+	@echo "${BOLD}Create blank dev.less file...  ${NORM}${CHECK}\n"
 
 
 # ----------------------
