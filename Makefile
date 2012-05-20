@@ -41,9 +41,9 @@ clean:
 #  Compile CSS
 # ----------------------
 css:
-	@cat css/bootstrap.min.css > production.css
-	@cat css/bootstrap-responsive.min.css >> production.css
-	@recess --compile css/dev.less >> production.css
+	@cat css/bootstrap.min.css > css/production.css
+	@cat css/bootstrap-responsive.min.css >> css/production.css
+	@recess --compress css/dev.less >> css/production.css
 	@echo "\n⚡  ${BOLD}Don't forget to update index.html${NORM}  ⚡\n"
 
 
@@ -72,7 +72,7 @@ js:
 # ----------------------
 watch:
 	@echo "\n${BOLD}Watching dev.less...  ${NORM}\n"
-	watchr -e "watch('css/.*\.less') { system 'make css' }"
+	@watchr -e "watch('css/dev.less') { system 'make css' }"
 
 
 .PHONY: css js
