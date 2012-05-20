@@ -14,7 +14,7 @@ From the command line, run the following:
 You will need to install `recess` and `watchr` with
 [`npm`](http://npmjs.org/) and [`node.js`](http://nodejs.org/#download):
 
-    $ npm install -g recess watchr
+    npm install -g recess watchr
 
 Then, create the necessary files with the following command:
 
