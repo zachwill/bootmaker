@@ -34,3 +34,18 @@ And edit the `index.html` file to point to `css/production.css` rather
 than the separate Bootstrap files and your `dev.less` stylesheet.
 
     <link rel="stylesheet" href="css/production.css">
+
+
+Automation
+----------
+
+If you've installed `watchr`, the CSS files can automatically be
+compiled for you by running:
+
+    make watch
+
+Now, everytime you save the `dev.less` file, the `production.css` file
+will be updated. Pretty nifty, huh?
+
+Make sure you also make the necessary changes to `index.html` to point
+to the `production.css` file.
