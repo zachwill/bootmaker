@@ -11,9 +11,9 @@ From the command line, run the following:
 
     curl -L http://git.io/bootmake > Makefile
 
-In order to take full advantage of the `Makefile`, you will need to install `recess` with
-[`npm`](http://npmjs.org/) and [`node.js`](http://nodejs.org/#download),
-and also install `watchr`:
+In order to take advantage of the `Makefile`, you will need to install `recess` with
+[`npm`](http://npmjs.org/). Also, in order to automatically compile your
+files, install `watchr`:
 
     npm install -g recess
     sudo gem install watchr
