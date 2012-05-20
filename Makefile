@@ -50,7 +50,10 @@ css:
 #  Set up the index.html file
 # ----------------------
 index:
-	@echo "index.html"
+	@curl -L http://git.io/index > index.html
+	@echo "\n${BOLD}Create index.html...  ${NORM}${CHECK}\n"
+	@touch css/dev.less
+	@echo "\n${BOLD}Create blank dev.less file...  ${NORM}${CHECK}\n"
 
 
 # ----------------------
