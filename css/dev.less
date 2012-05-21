@@ -4,13 +4,27 @@
 @purple: #5c0ef2;
 @mixed: #b80ef2;
 
+body{
+    h1, h2, h3{
+        font-weight: 300;
+    }
+    hr.soften{
+      border: 0;
+      height: 1px;
+      background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+    }
+}
+
 .above-fold{
     #gradient > .radial(@mixed, darken(@purple, 20%));
+    box-shadow: inset 0 0 4px black;
     color: #fff;
-    padding-top: 50px;
+    padding-top: 55px;
     text-shadow: 1px 1px 1px darken(@purple, 25%);
     h1{
-        font-weight: 300;
         font-size: 48px;
         padding-bottom: 15px;
         text-align: center;
@@ -49,7 +63,6 @@
     padding: 75px 0;
     h2{
         font-size: 36px;
-        font-weight: 300;
         text-align: center;
         text-shadow: 1px 1px 1px black;
     }
@@ -65,7 +78,7 @@
 .questions{
     #gradient > .vertical(#333, #111);
     color: #fff;
-    padding: 50px 0;
+    padding: 25px 0 50px;
     position: relative;
     text-shadow: 1px 1px 1px black;
     .gradient{
@@ -75,15 +88,17 @@
         top: 0;
         width: 100%;
     }
+    h3{
+        font-size: 24px;
+        padding: 25px 0 10px;
+    }
 }
 
-hr.soften{
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+.ribbon{
+    #gradient > .vertical(darken(@purple, 15%), darken(@purple, 25%));
+    border-top: 1px solid @purple;
+    border-bottom: 0;
+    height: 6px;
 }
 
 
@@ -109,6 +124,12 @@ hr.soften{
  * Desktop
  */
 @media (min-width: 1200px) {
+    body{
+        p{
+            font-size: 14px;
+            line-height: 1.4em;
+        }
+    }
     .above-fold{
         h1{
             font-size: 64px;
