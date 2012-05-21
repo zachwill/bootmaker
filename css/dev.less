@@ -5,7 +5,7 @@
 @mixed: #b80ef2;
 
 .above-fold{
-    #gradient > .radial(@mixed, darken(@purple, 25%));
+    #gradient > .radial(@mixed, darken(@purple, 20%));
     color: #fff;
     padding-top: 50px;
     text-shadow: 1px 1px 1px darken(@purple, 25%);
@@ -16,23 +16,64 @@
         text-align: center;
     }
     small{
-        color: #fafafa;
+        color: #fff;
         font-weight: 300;
     }
 }
 
 .bash{
     display: block;
-    margin: 25px auto 0;
+    margin: 10px auto 0;
 }
 
 .features{
-    padding-top: 50px;
+    padding: 50px 0;
     .tagline{
         font-weight: 300;
         font-size: 28px;
         line-height: 1.2em;
         text-align: center;
+    }
+    .steps{
+        img{
+            display: block;
+            margin: 25px auto 10px;
+        }
+    }
+}
+
+.github{
+    #gradient > .vertical(@mixed, darken(@purple, 20%));
+    border-top: 1px solid @purple;
+    color: #fff;
+    padding: 75px 0;
+    h2{
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+    }
+    .btn{
+        .buttonBackground(#333, #111);
+        color: #fff;
+        margin-left: 50px;
+        padding: 15px 50px;
+        vertical-align: text-top;
+    }
+}
+
+.questions{
+    #gradient > .vertical(#333, #111);
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    text-shadow: 1px 1px 1px black;
+    .gradient{
+        #gradient > .vertical(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.01));
+        height: 4px;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }
 
@@ -70,7 +111,7 @@ hr.soften{
 @media (min-width: 1200px) {
     .above-fold{
         h1{
-            font-size: 68px;
+            font-size: 64px;
         }
         small{
             font-size: 22px;
