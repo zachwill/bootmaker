@@ -11,6 +11,9 @@ CHECK=\033[32m✔\033[39m
 # ----------------------
 build:
 	@echo "\n⚡  ${BOLD}This might take a minute${NORM}  ⚡\n"
+	@touch README.md
+	@git init && git add --all && git commit -am "First commit"
+	@git checkout -b gh-pages
 	@make boot
 	@cd bootstrap; mv bootstrap/* ../
 	@echo "\n${BOLD}Move files...  ${NORM}${CHECK}\n"
@@ -18,6 +21,13 @@ build:
 	@make index
 	@make js
 	@echo "\n⚡  ${BOLD}Good luck building your site${NORM}  ⚡\n"
+
+
+# ----------------------
+#  Installer check
+# ----------------------
+install:
+	@echo "\n${BOLD}You're all good!${NORM}\n"
 
 
 # ----------------------
