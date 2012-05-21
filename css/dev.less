@@ -24,12 +24,17 @@ body{
 .above-fold{
     #gradient > .radial(@mixed, darken(@purple, 20%));
     color: #fff;
-    padding-top: 50px;
+    padding-top: 25px;
     text-shadow: 1px 1px 3px darken(@purple, 25%);
     h1{
         font-size: 48px;
-        padding-bottom: 15px;
+        line-height: 1em;
+        padding: 10px 0;
         text-align: center;
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
+        background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
+        background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
+        background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
     }
     small{
         color: #fff;
