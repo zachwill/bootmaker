@@ -4,6 +4,7 @@
 NORM=\033[0m
 BOLD=\033[1m
 CHECK=\033[32m✔\033[39m
+port=5000
 
 
 # ----------------------
@@ -75,6 +76,13 @@ js:
 	@echo "\n${BOLD}Grab latest jQuery...  ${NORM}${CHECK}\n"
 	@curl -L http://git.io/less-1.3.0 > js/less.js
 	@echo "\n${BOLD}Grab latest LESS.js...  ${NORM}${CHECK}\n"
+
+
+# ----------------------
+#  Simple Python server
+# ----------------------
+serve:
+	@python -m SimpleHTTPServer ${port}
 
 
 # ----------------------

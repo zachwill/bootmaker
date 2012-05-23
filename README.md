@@ -61,3 +61,21 @@ will be updated. Pretty nifty, huh?
 
 Make sure you also make the necessary changes to `index.html` to point
 to the `production.css` file.
+
+
+Serve
+-----
+
+Since it's best to use a simple HTTP server when creating your site, a
+`serve` command has been added to the `Makefile`:
+
+```bash
+make serve
+```
+
+You can also specify what port you'd prefer to use:
+
+
+```bash
+make serve port=5555
+```
