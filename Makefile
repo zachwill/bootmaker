@@ -12,9 +12,6 @@ port=5000
 # ----------------------
 build:
 	@echo "\n⚡  ${BOLD}This might take a minute${NORM}  ⚡\n"
-	@touch README.md
-	@git init && git add --all && git commit -am "First commit"
-	@git checkout -b gh-pages
 	@make boot
 	@cd bootstrap; mv bootstrap/* ../
 	@echo "\n${BOLD}Move files...  ${NORM}${CHECK}\n"
@@ -22,13 +19,6 @@ build:
 	@make index
 	@make js
 	@echo "\n⚡  ${BOLD}Good luck building your site${NORM}  ⚡\n"
-
-
-# ----------------------
-#  Installer check
-# ----------------------
-install:
-	@echo "\n${BOLD}You're all good!${NORM}\n"
 
 
 # ----------------------
@@ -69,6 +59,13 @@ index:
 
 
 # ----------------------
+#  Installer check
+# ----------------------
+install:
+	@echo "\n${BOLD}You're all good!${NORM}\n"
+
+
+# ----------------------
 #  External JavaScript
 # ----------------------
 js:
@@ -76,6 +73,16 @@ js:
 	@echo "\n${BOLD}Grab latest jQuery...  ${NORM}${CHECK}\n"
 	@curl -L http://git.io/less-1.3.0 > js/less.js
 	@echo "\n${BOLD}Grab latest LESS.js...  ${NORM}${CHECK}\n"
+
+
+# ----------------------
+#  Github Pages build
+# ----------------------
+pages:
+	@echo "\n⚡  ${BOLD}Installing for Github Pages${NORM}  ⚡\n"
+	@touch README.md
+	@git init && git add --all && git commit -am "First commit" && git checkout -b gh-pages
+	@make build
 
 
 # ----------------------
