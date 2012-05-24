@@ -1,10 +1,9 @@
 
-
 ⚡⚡  bootmaker  ⚡⚡
 
 Copy and paste the following command:
 
-    curl -L http://git.io/bootmake > Makefile && make
+    curl -L http://git.io/bootmake > Makefile && make pages
 
 This will download the Makefile, initialize Git, and create the base
 framework for your Bootstrap website.
