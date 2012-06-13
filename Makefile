@@ -6,6 +6,11 @@ BOLD=\033[1m
 CHECK=\033[32m✔\033[39m
 port=5000
 
+# ----------------------
+#  Custom errors
+# ----------------------
+NPM="\nWhoops! You still need to run:\n\n  ${BOLD}npm install -g recess${NORM}\n"
+
 
 # ----------------------
 #  Default build
@@ -44,7 +49,7 @@ clean:
 css:
 	@cd css; cat bootstrap.min.css > production.css
 	@cd css; cat bootstrap-responsive.min.css >> production.css
-	@cd css; recess --compress dev.less >> production.css
+	@cd css; type recess && recess --compress dev.less >> production.css || echo ${NPM}
 	@echo "\n⚡  ${BOLD}Don't forget to update index.html${NORM}  ⚡\n"
 
 
