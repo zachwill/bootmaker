@@ -52,7 +52,7 @@ css:
 #  Set up the index.html file
 # ----------------------
 index:
-	@curl -L https://raw.github.com/zachwill/bootmaker/master/index.html > index.html
+	[ -f index.html ] || curl -L https://raw.github.com/zachwill/bootmaker/master/index.html > index.html
 	@echo "\n${BOLD}Create index.html...  ${NORM}${CHECK}\n"
 	@touch css/dev.less
 	@echo "${BOLD}Create blank dev.less file...  ${NORM}${CHECK}\n"
